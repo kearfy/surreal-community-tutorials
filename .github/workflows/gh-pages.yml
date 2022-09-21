@@ -20,9 +20,17 @@ jobs:
           mdbook-version: '0.4.10'
           # mdbook-version: 'latest'
 
-      - run: mdbook build
+      - name: Build mdBook
+        run: mdbook build
+      
+      - name: "Create CNAME file (Create DEPLOY_DOMAIN secret)"
+        uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: book/CNAME
+          FILE_DATA: ${{ secrets.DEPLOY_DOMAIN }}
+        if: env.FILE_DATA
 
-      - name: Deploy
+      - name: Push to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
