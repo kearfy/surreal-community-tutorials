@@ -11,8 +11,10 @@ function FillGuideIntro(g) {
 
 function CollectFolderGuides(folder) {
     let guides = [];
+    let summaryLinks = "";
     const matchOptions = /^---\ntitle: (.*)\ncreator: (.*)\nlink: (.*)\n---$/m;
     const files = fs.readdirSync(`./${folder}/`).filter(f => !f.startsWith('00-'));
+
     files.forEach(f => {
         const path = `./${folder}/${f}`;
         const content = fs.readFileSync(path).toString();
@@ -26,14 +28,20 @@ function CollectFolderGuides(folder) {
         const guide = {
             title: matchedOptions[1],
             creator: matchedOptions[2],
-            link: matchedOptions[3]
+            link: matchedOptions[3],
+            file: f
         };
 
-        guides.push(guide);
         fs.writeFileSync(path, content.replace(matchedOptions[0], FillGuideIntro(guide)))
+        summaryLinks += `\n- [${guide.title}](${guide.file}) - [${guide.creator}](${guide.link})`;
+        guides.push(guide);
     });
 
-    console.log(JSON.stringify(guides, null, 2));
+    fs.appendFileSync(`./${folder}/00-SUMMARY.md`, summaryLinks);
+    return guides;
 }   
 
-CollectFolderGuides('community')
+const communityGuides   = CollectFolderGuides('community');
+const officialGuides    = CollectFolderGuides('official');
+
+
