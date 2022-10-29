@@ -1,6 +1,6 @@
 ---
 title: Cloudflare worker with SurrealDB
-creator: Micha de Vries
+creatsor: Micha de Vries
 link: https://github.com/kearfy
 ---
 
