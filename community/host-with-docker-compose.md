@@ -1,16 +1,8 @@
-<br>
-    <h1 align="center">Host in docker compose</h1>
-<br>
-
 ---
-
-<p>
-    Tutorial by <a href="https://github.com/kearfy" target="_blank">Micha de Vries</a>
-</p>
-
+title: Host with docker compose
+creator: Micha de Vries
+link: https://github.com/kearfy
 ---
-
-<br>
 
 As of writing this tutorial, Surreal Cloud is not yet available. For our project (which is currently heavily in development) we need to have an online instance of surrealdb available, so we have resided to a Hetzner VPS with docker-compose to keep it all clean and tidy.
 

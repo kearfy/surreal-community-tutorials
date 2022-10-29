@@ -1,13 +1,7 @@
-<br>
-  <h1 align="center">How to use signin and signup</h1>
-<br>
-
 ---
-
-<p>
-  Tutorial by <a href="https://github.com/koakh" target="_blank">Koakh</a> from <a href="https://github.com/tobiemh" target="_blank">Tobie</a> code snippet
-</p>
-
+title: How to use signin and signup
+creator: Koakh
+link: https://github.com/koakh
 ---
 
 ## Start InMemory Server
