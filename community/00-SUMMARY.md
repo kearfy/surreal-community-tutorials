@@ -4,7 +4,7 @@
 
 <br>
 
-1. [Cloudflare worker with SurrealDB](01-Cloudflare_worker_with_SurrealDB.md) - [Micha de Vries](https://github.com/kearfy)
-2. [Host in docker compose](02-Host_in_docker_compose.md) - [Micha de Vries](https://github.com/kearfy)
-3. [How to use signin and signup](03_How_to_use_signin_and_signup) - [Koakh](https://github.com/koakh)
-4. [Launch a SurrealDB instance on Fly.io](04-Launch_Instance_On_Flyio.md) - [Mark Lussier](https://github.com/intabulas)
+- [Cloudflare worker with SurrealDB](cloudflare-worker-with-surrealdb.md) - [Micha de Vries](https://github.com/kearfy)
+- [Host in docker compose](host-in-docker-compose.md) - [Micha de Vries](https://github.com/kearfy)
+- [How to use signin and signup](how-to-use-signin-and-signup.md) - [Koakh](https://github.com/koakh)
+- [Launch a SurrealDB instance on Fly.io](launch-instance-on-flyio.md) - [Mark Lussier](https://github.com/intabulas)
