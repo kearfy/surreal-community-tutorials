@@ -1,6 +1,12 @@
 import fs from 'fs';
 
 const guideIntroTemplate = fs.readFileSync('./theme/guideIntro.html').toString();
+const rootSummary = {
+    content: fs.readFileSync('./SUMMARY.md').toString(),
+    officialLinks: '- [Introduction](official/00-SUMMARY.md)',
+    communityLinks: '- [Introduction](community/00-SUMMARY.md)'
+};
+
 function FillGuideIntro(g) {
     let tmpl = guideIntroTemplate;
     tmpl = tmpl.replace('{{TITLE}}', g.title);
@@ -11,7 +17,7 @@ function FillGuideIntro(g) {
 
 function CollectFolderGuides(folder) {
     let guides = [];
-    let summaryLinks = "";
+    let summaryLinks = "\n";
     const matchOptions = /^---\ntitle: (.*)\ncreator: (.*)\nlink: (.*)\n---$/m;
     const files = fs.readdirSync(`./${folder}/`).filter(f => !f.startsWith('00-'));
 
@@ -34,14 +40,14 @@ function CollectFolderGuides(folder) {
 
         fs.writeFileSync(path, content.replace(matchedOptions[0], FillGuideIntro(guide)))
         summaryLinks += `\n- [${guide.title}](${guide.file}) - [${guide.creator}](${guide.link})`;
+        rootSummary[`${folder}Links`] += `\n    - [${guide.title}](${folder}/${guide.file})`;
         guides.push(guide);
     });
 
     fs.appendFileSync(`./${folder}/00-SUMMARY.md`, summaryLinks);
-    return guides;
+    rootSummary.content = rootSummary.content.replace(`- [Introduction](${folder}/00-SUMMARY.md)`, rootSummary[`${folder}Links`]);
 }   
 
-const communityGuides   = CollectFolderGuides('community');
-const officialGuides    = CollectFolderGuides('official');
-
-
+CollectFolderGuides('official');
+CollectFolderGuides('community');
+fs.writeFileSync('./SUMMARY.md', rootSummary.content);
