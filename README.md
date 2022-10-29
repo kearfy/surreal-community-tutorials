@@ -23,4 +23,4 @@ To view the community-submitted tutorials and code walkthroughs, view the [`comm
 
 If you would like to make a contribution, please follow the instructions in the Contribution Guidelines and then open a Pull-Request. One of the community managers will then evaluate your tutorial, and provide you with feedback.
 
-Make sure to also update the summary file in the root of the project, and the summary file for either the community of official guides when you add or remove a guide, or when you rename it.
+Due to the way we set up the repo you only need to create **ONE** file, which is your guide itself (outside of images/assets). Please include the configuration bit in the top of the template file and don't change it's structure, else the github action will fail.
