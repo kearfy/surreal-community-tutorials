@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Official guides</li><li class="chapter-item expanded "><a href="official/00-SUMMARY.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Community guides</li><li class="chapter-item expanded "><a href="community/00-SUMMARY.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="community/01-Cloudflare_worker_with_SurrealDB.html"><strong aria-hidden="true">2.1.</strong> Cloudflare worker with SurrealDB</a></li><li class="chapter-item expanded "><a href="community/02-Host_in_docker_compose.html"><strong aria-hidden="true">2.2.</strong> Host in docker compose</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Official guides</li><li class="chapter-item expanded "><a href="official/00-SUMMARY.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Community guides</li><li class="chapter-item expanded "><a href="community/00-SUMMARY.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="community/cloudflare-worker-with-surrealdb.html"><strong aria-hidden="true">2.1.</strong> Cloudflare worker with SurrealDB</a></li><li class="chapter-item expanded "><a href="community/host-with-docker-compose.html"><strong aria-hidden="true">2.2.</strong> Host with docker compose</a></li><li class="chapter-item expanded "><a href="community/how-to-use-signin-and-signup.html"><strong aria-hidden="true">2.3.</strong> How to use signin and signup</a></li><li class="chapter-item expanded "><a href="community/launch-instance-on-flyio.html"><strong aria-hidden="true">2.4.</strong> Running a SurrealDB Instance on Fly.io</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -113,7 +113,7 @@
                                             </div>
 
                     <h1 class="menu-title">
-                        <img src="img/white/logo.svg" alt="">
+                        <img src="/assets/repo-assets/logo-white.svg" alt="">
                     </h1>
 
                     <div class="right-buttons">
@@ -149,10 +149,10 @@
                         <br>
 <p align="center">
     <a href="https://github.com/surrealdb/tutorials#gh-dark-mode-only" target="_blank">
-        <img width="300" src="img/white/logo.svg" alt="SurrealDB Logo">
+        <img width="300" src="assets/repo-assets/logo-white.svg" alt="SurrealDB Logo">
     </a>
     <a href="https://github.com/surrealdb/tutorials#gh-light-mode-only" target="_blank">
-        <img width="300" src="img/black/logo.svg" alt="SurrealDB Logo">
+        <img width="300" src="assets/repo-assets/logo-black.svg" alt="SurrealDB Logo">
     </a>
 </p>
 <p align="center">Welcome to the tutorials repository for SurrealDB, with official and community contributed tutorials.</p>
@@ -162,26 +162,40 @@
 <p>To view the community-submitted tutorials and code walkthroughs, view the <a href="https://github.com/surrealdb/tutorials/tree/main/community"><code>community</code></a> folder in this repository.</p>
 <h4 id="contributing"><a class="header" href="#contributing">Contributing</a></h4>
 <p>If you would like to make a contribution, please follow the instructions in the Contribution Guidelines and then open a Pull-Request. One of the community managers will then evaluate your tutorial, and provide you with feedback.</p>
-<p>Make sure to also update the summary file in the root of the project, and the summary file for either the community of official guides when you add or remove a guide, or when you rename it.</p>
+<p>Due to the way we set up the repo you only need to create <strong>ONE</strong> file, which is your guide itself (outside of images/assets). Please include the configuration bit in the top of the template file and don't change it's structure, else the github action will fail.</p>
 <div style="break-before: page; page-break-before: always;"></div><br>
-<h1 align="center">Official guides</h1>
+    <h1 align="center">Official guides</h1>
 <br>
-<ol>
-<li>No guides exist one, be the first to add something!</li>
-</ol>
-<div style="break-before: page; page-break-before: always;"></div><br>
-<h1 align="center">Community guides</h1>
+<p>Only SurrealDB staff are allowed to create guides here. If you have a guide which we think will fit in the official category, we will propose this to the surrealdb team <em>for</em> you.</p>
 <br>
-<ol>
-<li><a href="community/01-Cloudflare_worker_with_SurrealDB.html">Cloudflare worker with SurrealDB</a> - <a href="https://github.com/kearfy">Micha de Vries</a></li>
-<li><a href="community/02-Host_in_docker_compose.html">Host in docker compose</a> - <a href="https://github.com/kearfy">Micha de Vries</a></li>
-</ol>
+<hr />
+<h2 id="guides"><a class="header" href="#guides">Guides</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><br>
-<h1 align="center">Cloudflare worker with SurrealDB</h1>
+    <h1 align="center">Community guides</h1>
+<br>
+<p>Please follow the contribution guidelines when creating a new guide:</p>
+<ul>
+<li>A Pull Request will be rejected if it's subject is wider than about only one guide.</li>
+<li>Please follow the template file and keep the top configuration in the same order. Otherwise the test will fail and it will <strong>not</strong> build.</li>
+<li>If you think something can be done better about the repository, please open an issue first to discuss the matter! It will create a mess if everybody opens a PR for small improvements to be rejected.</li>
+<li><strong>Note</strong>: Because of the way we built the repo, your PR only needs to contain <strong>one</strong> file, which is the guide itself (outside of potential images). All other changes <strong>will be rejected</strong>.</li>
+</ul>
+<br>
+<hr />
+<h2 id="guides-1"><a class="header" href="#guides-1">Guides</a></h2>
+<ul>
+<li><a href="community/cloudflare-worker-with-surrealdb.html">Cloudflare worker with SurrealDB</a> - <a href="https://github.com/kearfy">Micha de Vries</a></li>
+<li><a href="community/host-with-docker-compose.html">Host with docker compose</a> - <a href="https://github.com/kearfy">Micha de Vries</a></li>
+<li><a href="community/how-to-use-signin-and-signup.html">How to use signin and signup</a> - <a href="https://github.com/koakh">Koakh</a></li>
+<li><a href="community/launch-instance-on-flyio.html">Running a SurrealDB Instance on Fly.io</a> - <a href="https://github.com/intabulas">Mark Lussier</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><br>
+    <h1 align="center">Cloudflare worker with SurrealDB</h1>
 <br>
 <hr />
 <p>
-    Tutorial by <a href="https://github.com/kearfy" target="_blank">Micha de Vries</a>
+    Tutorial by <a href="https://github.com/kearfy" target="_blank">Micha de Vries</a>.<br>
+    Edit this tutorial on <a href="https://github.com/surrealdb/tutorials/blob/main/community/cloudflare-worker-with-surrealdb.md">GitHub</a>.
 </p>
 <hr />
 <br>
@@ -267,11 +281,12 @@ res.forEach(record =&gt; {
 });
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><br>
-    <h1 align="center">Host in docker compose</h1>
+    <h1 align="center">Host with docker compose</h1>
 <br>
 <hr />
 <p>
-    Tutorial by <a href="https://github.com/kearfy" target="_blank">Micha de Vries</a>
+    Tutorial by <a href="https://github.com/kearfy" target="_blank">Micha de Vries</a>.<br>
+    Edit this tutorial on <a href="https://github.com/surrealdb/tutorials/blob/main/community/host-with-docker-compose.md">GitHub</a>.
 </p>
 <hr />
 <br>
@@ -308,6 +323,221 @@ services:
     volumes:
       - ./data:/data
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><br>
+    <h1 align="center">How to use signin and signup</h1>
+<br>
+<hr />
+<p>
+    Tutorial by <a href="https://github.com/koakh" target="_blank">Koakh</a>.<br>
+    Edit this tutorial on <a href="https://github.com/surrealdb/tutorials/blob/main/community/how-to-use-signin-and-signup.md">GitHub</a>.
+</p>
+<hr />
+<br>
+<h2 id="start-inmemory-server"><a class="header" href="#start-inmemory-server">Start InMemory Server</a></h2>
+<pre><code class="language-shell">$ surreal start --log trace --user root --pass root
+</code></pre>
+<h2 id="option-1-schemafull"><a class="header" href="#option-1-schemafull">Option #1: SCHEMAFULL</a></h2>
+<p>launch surreal REPL to connect to local SurrealDB server instance</p>
+<pre><code class="language-shell">$ surreal sql --conn http://localhost:8000 --user root --pass root --ns test --db test --pretty
+</code></pre>
+<p>now paste bellow surrealQL code block to create the schemafull scheme</p>
+<pre><code class="language-sql">---define SCHEMAFULL and PERMISSIONS
+DEFINE TABLE user SCHEMAFULL
+  PERMISSIONS
+    FOR select, update WHERE id = $auth.id, 
+    FOR create, delete NONE;
+--- define FIELD's
+DEFINE FIELD user ON user TYPE string;
+DEFINE FIELD pass ON user TYPE string;
+DEFINE FIELD settings.* ON user TYPE object;
+DEFINE FIELD settings.marketing ON user TYPE string;
+DEFINE FIELD tags ON user TYPE array;
+--- define INDEX's
+DEFINE INDEX idx_user ON user COLUMNS user UNIQUE;
+
+-- define SCOPE
+DEFINE SCOPE allusers
+  -- the JWT session will be valid for 14 days
+  SESSION 14d
+  -- The optional SIGNUP clause will be run when calling the signup method for this scope
+  -- It is designed to create or add a new record to the database.
+  -- If set, it needs to return a record or a record id
+  -- The variables can be passed in to the signin method
+  SIGNUP ( CREATE user SET settings.marketing = $marketing, user = $user, pass = crypto::argon2::generate($pass), tags = $tags )
+  -- The optional SIGNIN clause will be run when calling the signin method for this scope
+  -- It is designed to check if a record exists in the database.
+  -- If set, it needs to return a record or a record id
+  -- The variables can be passed in to the signin method
+  SIGNIN ( SELECT * FROM user WHERE user = $user AND crypto::argon2::compare(pass, $pass) )
+  -- this optional clause will be run when calling the signup method for this scope
+</code></pre>
+<p>check info db in REPL</p>
+<pre><code class="language-sql">&gt; INFO FOR DB;
+[
+  {
+    &quot;result&quot;: {
+      &quot;dl&quot;: {},
+      &quot;dt&quot;: {},
+      &quot;sc&quot;: {
+        &quot;allusers&quot;: &quot;DEFINE SCOPE allusers SESSION 2w SIGNUP (CREATE user SET settings.marketing = $marketing, user = $user, pass = crypto::argon2::generate($pass), tags = $tags) SIGNIN (SELECT * FROM user WHERE user = $user AND crypto::argon2::compare(pass, $pass))&quot;
+      },
+      &quot;tb&quot;: {
+        &quot;user&quot;: &quot;DEFINE TABLE user SCHEMAFULL PERMISSIONS FOR select WHERE id = $auth.id, FOR create NONE, FOR update WHERE id = $auth.id, FOR delete NONE&quot;
+      }
+    },
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;time&quot;: &quot;153.601µs&quot;
+  }
+]
+</code></pre>
+<h2 id="option-2--schemaless"><a class="header" href="#option-2--schemaless">Option #2 : SCHEMALESS</a></h2>
+<p>another nice option suggested by <a href="https://gist.github.com/georgyo">George Shammas / georgyo</a></p>
+<pre><code class="language-sql">DEFINE SCOPE allusers 
+SESSION 14d
+SIGNUP (
+  CREATE type::thing(&quot;user&quot;, string::lowercase(string::trim($user)))
+  SET pass = crypto::argon2::generate($pass)
+)
+SIGNIN (
+  SELECT * FROM type::thing(&quot;user&quot;, string::lowercase(string::trim($user)))
+  WHERE crypto::argon2::compare(pass, $pass)
+)
+</code></pre>
+<p>Because we are <strong>reusing the id, the username unique constraint is enforced</strong> even in a SCHEMALESS table.</p>
+<p>However this also means that <strong>username will not be changeable in the future</strong> as all relationships will be using the old username as the key.</p>
+<p>check info db in REPL</p>
+<pre><code class="language-sql">&gt; INFO FOR DB;
+[
+  {
+    &quot;result&quot;: {
+      &quot;dl&quot;: {},
+      &quot;dt&quot;: {},
+      &quot;sc&quot;: {
+        &quot;allusers&quot;: &quot;DEFINE SCOPE allusers SESSION 2w SIGNUP (CREATE type::thing(\&quot;user\&quot;, string::lowercase(string::trim($user))) SET pass = crypto::argon2::generate($pass)) SIGNIN (SELECT * FROM type::thing(\&quot;user\&quot;, string::lowercase(string::trim($user))) WHERE crypto::argon2::compare(pass, $pass))&quot;
+      },
+      &quot;tb&quot;: {
+        &quot;user&quot;: &quot;DEFINE TABLE user SCHEMALESS PERMISSIONS NONE&quot;
+      }
+    },
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;time&quot;: &quot;93.978µs&quot;
+  }
+]
+
+&gt; SELECT * FROM user;
+[
+  {
+    &quot;result&quot;: [
+      {
+        &quot;id&quot;: &quot;user:tobie&quot;,
+        &quot;pass&quot;: &quot;$argon2id$v=19$m=4096,t=3,p=1$oFQ8a4HFXjfaadQcOdPlLw$MZrA6mNvtvFLuQq1GGhfrGs4wk9iflhKT2rRsZLxwE4&quot;
+      }
+    ],
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;time&quot;: &quot;125.017µs&quot;
+  }
+]
+</code></pre>
+<h2 id="test-signin-and-signup-with-javascript-surrealdbjs-integration"><a class="header" href="#test-signin-and-signup-with-javascript-surrealdbjs-integration">Test signin and signup with Javascript surrealdb.js integration</a></h2>
+<p>use following query from the client to <strong>signup a new user</strong></p>
+<pre><code class="language-js">db.signup({
+  NS: 'my_ns',
+  DB: 'my_db',
+  // We want to signup to the 'allusers' scope defined above
+  SC: 'allusers',
+  // We can add any variable here to use in the SIGNUP clause
+  user: 'tobie',
+  // We can add any variable here to use in the SIGNUP clause
+  pass: 'some password',
+  // We can add any variable here to use in the SIGNUP clause
+  marketing: true,
+  // We can add any variable here to use in the SIGNUP clause
+  tags: ['rust', 'golang', 'javascript'],
+});
+</code></pre>
+<p>you should receive a jwt token for ex</p>
+<pre><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NjQyMjQxMjEsIm5iZiI6MTY2NDIyNDEyMSwiZXhwIjoxNjY1NDMzNzIxLCJpc3MiOiJTdXJyZWFsREIiLCJucyI6InRlc3QiLCJkYiI6InRlc3QiLCJzYyI6ImFsbHVzZXJzIiwiaWQiOiJ1c2VyOmQ4dzR4aHZtY2hxcHh6enl5ZjUyIn0.TWjIEm8z2TeuE27uJ9MvgfCELvOT0hC6e8vlOPUNJMx-lvxYXIYgXXcibdVxEWNQqnXu1gaUOus4KgjsWaUD-A
+</code></pre>
+<p>and <strong>signin an existing user</strong></p>
+<pre><code class="language-js">db.signin({
+  NS: 'my_ns',
+  DB: 'my_db',
+  // We want to signup to the 'allusers' scope defined above
+  SC: 'allusers',
+  // We can add any variable here to use in the SIGNUP clause
+  user: 'tobie',
+  // We can add any variable here to use in the SIGNUP clause
+  pass: 'some password',
+});
+</code></pre>
+<p>you should receive a jwt token for ex</p>
+<pre><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NjQyMjQxNjMsIm5iZiI6MTY2NDIyNDE2MywiZXhwIjoxNjY1NDMzNzYzLCJpc3MiOiJTdXJyZWFsREIiLCJucyI6InRlc3QiLCJkYiI6InRlc3QiLCJzYyI6ImFsbHVzZXJzIiwiaWQiOiJ1c2VyOmQ4dzR4aHZtY2hxcHh6enl5ZjUyIn0.kKx_WShYBf9T_sCa_pRldHTG9LyfIx-4q0V4sz2kKzxSG4b_okG-MddTwdqHnsdS7rEJxZ-Gp-iP4cpgo77kqQ
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><br>
+    <h1 align="center">Running a SurrealDB Instance on Fly.io</h1>
+<br>
+<hr />
+<p>
+    Tutorial by <a href="https://github.com/intabulas" target="_blank">Mark Lussier</a>.<br>
+    Edit this tutorial on <a href="https://github.com/surrealdb/tutorials/blob/main/community/launch-instance-on-flyio.md">GitHub</a>.
+</p>
+<hr />
+<br>
+<p>These are the steps for getting a <a href="https://surrealdb.com/">surrealdb</a> instance running on <a href="https://fly.io/">fly.io</a> and connecting to it. This is <strong>heavily</strong> based off of steps posted in the surrealdb discord by rvdende. <a href="https://discord.com/channels/902568124350599239/1022387563627028511/1022928762947514449">View Original Post</a>.</p>
+<p>These steps work just fine for the hobby (pay as you go) plan.</p>
+<p><strong>HEADS UP</strong> By default this will create an instance on a single shared cpu with 256m memory. This is pretty darn small to do anything but experiment, but its free. You can scale your instance to something more useable by visiting the <code>https://fly.io/apps/&lt;appname&gt;/scale</code>. Obviously scaling to larger instances will incur higher costs, please refer to <a href="https://fly.io/docs/about/pricing/">fly.io pricing</a></p>
+<h3 id="installing-flyio-client"><a class="header" href="#installing-flyio-client">Installing fly.io client</a></h3>
+<p>source: <a href="https://fly.io/docs/hands-on/install-flyctl/">fly.io docs</a></p>
+<pre><code class="language-bash">brew install flyctl
+</code></pre>
+<h3 id="optionally-create-a-free-account-if-needed"><a class="header" href="#optionally-create-a-free-account-if-needed">Optionally create a free account if needed</a></h3>
+<p>source: <a href="https://fly.io/docs/hands-on/sign-up/">fly.io docs</a></p>
+<pre><code class="language-bash">flyctl auth signup
+</code></pre>
+<h3 id="login-to-your-flyio-account"><a class="header" href="#login-to-your-flyio-account">Login to your fly.io account</a></h3>
+<p>source: <a href="https://fly.io/docs/hands-on/sign-in/">fly.io docs</a></p>
+<pre><code class="language-bash">flyctl auth login
+</code></pre>
+<h2 id="create-a-dockerfile-to-run-surrealdb"><a class="header" href="#create-a-dockerfile-to-run-surrealdb">Create a Dockerfile to run SurrealDB</a></h2>
+<p>Create a directory locally, cd into it and create a new <code>Dockerfile</code>. Note we aren't providing a root user username/password to the start command, we will be providing those as environment variables.</p>
+<pre><code class="language-docker">FROM surrealdb/surrealdb:latest
+EXPOSE 8080
+CMD [&quot;start&quot;, &quot;--bind&quot;, &quot;0.0.0.0:8080&quot;, &quot;file://data/srdb.db&quot;]
+</code></pre>
+<h3 id="launch-your-instance-sort-of-"><a class="header" href="#launch-your-instance-sort-of-">Launch your Instance.. sort of :)</a></h3>
+<pre><code class="language-sh">fly launch
+</code></pre>
+<p>You will be prompted with various questions. Give your app a memorable name since it will be used in the URL. Pick a region close to you and most importantly, answer NO when prompted if you wish to deploy immediately.</p>
+<h3 id="create-a-volume"><a class="header" href="#create-a-volume">Create a volume</a></h3>
+<p>We need to create a volume for surreal to write the database to. Lets create a small 1g volume. Right now you can not scale a volume (you need to create a new one), but fly.io is working on supporting this. You can get up a total of 3g of persistent volume storage (total) for free.</p>
+<pre><code class="language-bash">fly volumes create data --region &lt;region&gt; --size 1
+</code></pre>
+<p>Now lets edit the <code>fly.toml</code> file that was created by <code>fly launch</code>. Put this at the end, no indentations or spaces.</p>
+<pre><code class="language-toml">[mounts]
+source=&quot;data&quot;
+destination=&quot;/data&quot;
+</code></pre>
+<h3 id="secrets"><a class="header" href="#secrets">Secrets</a></h3>
+<p>Now lets add our username and password as secrets. You can see the environment variables surrealdb supports by running <code>surreal start -h</code></p>
+<pre><code class="language-bash">fly secrets set USER=root
+fly secrets set PASS=&lt;passwordhere&gt;
+</code></pre>
+<h3 id="lets-deploy"><a class="header" href="#lets-deploy">Let's Deploy</a></h3>
+<pre><code class="language-bash">fly deploy
+</code></pre>
+<h3 id="connecting"><a class="header" href="#connecting">Connecting</a></h3>
+<p>Now that your surrealdb instance is up and running, you need to be able to connect to it. Even though we exposed port 8080 in the Dockerfile, fly will map that appropriatly to port 80/443.</p>
+<p>If you're connecting via a websocket client library, surrealdb-go in my case, you would connect with the following. Note the use of <code>wss://</code></p>
+<pre><code class="language-go">db, err := surrealdb.New(&quot;wss://&lt;appname&gt;.fly.dev/rpc&quot;)
+if err != nil {
+	fmt.Printf(&quot;error creating socket: %s&quot;, err)
+	os.Exit(2)
+}
+</code></pre>
+<h3 id="surreal-sql-command"><a class="header" href="#surreal-sql-command">Surreal sql Command</a></h3>
+<p>If you're connecting via the surreal cli, use a connection string with <code>--conn https://&lt;appname&gt;.fly.dev</code>. Please don't forget to pass <code>--user</code>/<code>--pass</code> with the values you used when creating secrets.</p>
+<h3 id="third-party-tools-such-as-rvdendes-a-hrefhttpssurrealreactflydevsurrealreacta"><a class="header" href="#third-party-tools-such-as-rvdendes-a-hrefhttpssurrealreactflydevsurrealreacta">Third Party tools such as rvdende's <a href="https://surrealreact.fly.dev/">surrealreact</a></a></h3>
+<p>When creating a connection, specify the host as <code>https://&lt;appname&gt;.fly.dev/rpc</code></p>
 
                     </main>
 
